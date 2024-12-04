@@ -27,8 +27,10 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          title: const Text(
-        'Music Player PNT3',
+          title: Center(
+        child: const Text(
+          'Music Player PNT3',
+        ),
       )),
       body: SafeArea(
         child: Padding(
@@ -160,9 +162,9 @@ class _HomePageState extends State<HomePage> {
               ),
               Slider(
                   min: 1,
-                  max: 3,
+                  max: 5,
                   value: snapshot.data ?? 1,
-                  divisions: 3,
+                  divisions: 5,
                   onChanged: (value) async {
                     await _player.setSpeed(value);
                   })
@@ -191,4 +193,5 @@ class _HomePageState extends State<HomePage> {
 
 
 
-//O APP JA INICIA COM ERRO: NÃ OENCONTRA NENHUM DOS AQRQUIVOS: ON LINE E OFF LINE
+//add nova dependencia
+// proble3ma de icone: usando a dependencia cupertino: nao aparece em certo sistemas(feitos pra ios)
